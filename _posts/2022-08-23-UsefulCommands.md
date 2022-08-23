@@ -5,13 +5,18 @@ categories: [doc]
 tags: [commands, environment] # TAG names should always be lowercase
 ---
 
-## Save Environment Variable On Your Machine
-### This could be useful to save Jwt Token KEY locally. Remember to make a note to do the same on host machine.
+# Save Environment Variable On Your Machine
+ This could be useful to save Jwt Token KEY locally. Remember to make a note to do the same on host machine.
 
 - Open Command Prompt as Admin
 - run command: setx KEY "\<key value>" /M
 
 **The /M makes it a system variable, and not local
+
+### To retrieve this value (in C#):
+```C#
+var key = Environment.GetEnvironmentVarialbe("KEY");
+```
 
 ---
 
