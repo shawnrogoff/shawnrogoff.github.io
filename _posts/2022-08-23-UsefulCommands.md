@@ -14,7 +14,8 @@ tags: [commands, environment] # TAG names should always be lowercase
 **The /M makes it a system variable, and not local
 
 ### To retrieve this value (in C#):
-```C#
+
+```c#
 var key = Environment.GetEnvironmentVarialbe("KEY");
 ```
 
