@@ -21,3 +21,15 @@ var key = Environment.GetEnvironmentVarialbe("KEY");
 
 ---
 
+# Entity Framework
+### Migrations & Database Updates:
+
+```shell_session
+dotnet ef migrations add <MigrationName>
+```
+
+```shell_session
+dotnet ef database update
+```
+
+---
