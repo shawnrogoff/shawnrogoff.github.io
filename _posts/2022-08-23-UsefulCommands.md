@@ -1,7 +1,7 @@
 ---
 title: Useful Commands I've Used
 date: 2022-08-23 11:00:00 -500  
-categories: [doc]
+categories: [docs]
 tags: [commands, environment] # TAG names should always be lowercase
 ---
 
