@@ -37,3 +37,42 @@ toCamel(o) {
   }
   ```
 ---
+## Only allow numbers or letters in a text field:
+
+```typescript
+<input matInput
+    type="text"
+    class="text-dark"
+    (input)="onEnterStoreNumber($event)"
+    placeholder="Store Number"
+    matTooltip="Enter store number."
+    autocomplete="off"
+    maxlength="3"
+    ngModel
+    (keypress)="keyPressNumbersOnly($event)">
+```
+
+```javascript
+  keyPressNumbersOnly(event) {
+      let charCode = (event.which) ? event.which : event.keyCode;
+      // Only Numbers 0-9
+      if ((charCode < 48 || charCode > 57)) {
+          event.preventDefault();
+          return false;
+      } else {
+          return true;
+      }
+  }
+
+  keyPressAllowLettersOnly(event) {
+      let input = String.fromCharCode(event.keyCode);
+
+      if (/[a-zA-Z]/.test(input)) {
+          return true;
+      } else {
+          event.preventDefault();
+          return false;
+      }
+  }
+```
+---
