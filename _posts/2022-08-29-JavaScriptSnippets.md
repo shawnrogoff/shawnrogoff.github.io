@@ -8,7 +8,7 @@ tags: [snippets, code] # TAG names should always be lowercase
 
 ## convert a javascript object to camelCase with recursion:
 
-```Javascript
+```javascript
 let formattedObject = this.toCamel(notFormattedObject);
 
 toCamel(o) {
@@ -35,7 +35,7 @@ toCamel(o) {
     }
     return newO
   }
-  ```
+```
 ---
 ## Only allow numbers or letters in a text field:
 
