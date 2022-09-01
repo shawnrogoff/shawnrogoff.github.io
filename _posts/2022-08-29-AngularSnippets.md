@@ -255,6 +255,8 @@ updateVariableToUpdate(value: eventValueType) {
 <app-childComponentTag (eventName)="updateVariableToUpdate($event)"></app-childComponentTag>
 ```
 
+### <a src="https://www.youtube.com/watch?v=qspoPXaF_Aw&t=575s" target="_blank">Useful Youtube Video On This Subject</a>
+
 </br>
 </br>
 </br>
