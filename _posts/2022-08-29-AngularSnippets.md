@@ -140,7 +140,9 @@ ng generate s security-watch --skip-tests
 ```
 ---
 </br>
+
 </br>
+
 </br>
 
 # Angular Materials Styling Examples:
@@ -208,7 +210,9 @@ ng generate s security-watch --skip-tests
 
 ---
 </br>
+
 </br>
+
 </br>
 
 # Angular Guides/Walkthroughs:
@@ -258,7 +262,9 @@ updateVariableToUpdate(value: eventValueType) {
 ### <a src="https://www.youtube.com/watch?v=qspoPXaF_Aw&t=575s" target="_blank">Useful Youtube Video On This Subject</a>
 
 </br>
+
 </br>
+
 </br>
 
 # Angualar Debugging:
