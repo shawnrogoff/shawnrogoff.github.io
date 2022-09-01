@@ -224,7 +224,7 @@ ng generate s security-watch --skip-tests
 * Add this line:
 
 ```typescript
-@Output() <eventName> = new EventEmmitter<eventValueType>();
+@Output() <eventName> = new EventEmitter<eventValueType>();
 // eventValueType would be string, number, class, boolean, etc.
 ```
 * Add a function to emit the event:
