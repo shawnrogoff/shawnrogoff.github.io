@@ -255,6 +255,7 @@ updateVariableToUpdate(value: eventValueType) {
 }
 ```
 ### In parent component .html file:
+
 ```html
 <app-childComponentTag (eventName)="updateVariableToUpdate($event)"></app-childComponentTag>
 ```
