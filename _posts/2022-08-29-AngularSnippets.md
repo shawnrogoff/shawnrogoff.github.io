@@ -138,8 +138,127 @@ ng g m <name>
 ```shell_session
 ng generate s security-watch --skip-tests
 ```
+---
+</br>
+</br>
+</br>
+
+# Angular Materials Styling Examples:
+```css
+
+
+.mat-button-toggle {
+    background-color: lightgray;
+    color: rgb(43, 43, 43);
+    font-weight: normal;
+}
+
+.mat-button-toggle-checked {
+    background-color: #5882b9;
+    color: #fff;
+    font-weight: normal;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: #343a40 !important;
+   }
+
+::ng-deep .mat-form-field-label {
+  /*change color of label*/
+  color: #343a40 !important;
+  }
+
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: #343a40 !important;
+  }
+
+::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: #343a40 !important;
+  }
+
+::ng-deep.mat-input-element.mat-form-field-autofill-control {
+  background-color: transparent !important;
+}
+
+::ng-deep.mat-select-arrow{
+  color: #343a40 !important;
+}
+
+::ng-deep.mat-form-field-underline:before{
+    background-color: #343a40 !important;
+  }
+
+.mat-option {
+  color: #545454 !important;
+  background: lightgray !important;
+}
+
+.mat-option.mat-active {
+  background: #343a40 !important;
+  color: #FFF !important;
+}
+
+:host /deep/ .mat-select-value-text {
+  color: #343a40 !important;
+}
+```
 
 ---
+</br>
+</br>
+</br>
+
+# Angular Guides/Walkthroughs:
+
+## Send update a variable's value in parent component from the child component:
+
+### In child component .ts file:
+* Import the Output and EventEmitter interfaces from @angular/core
+* Add this line:
+
+```typescript
+@Output() <eventName> = new EventEmmitter<eventValueType>();
+// eventValueType would be string, number, class, boolean, etc.
+```
+* Add a function to emit the event:
+```typescript
+newRequestEventFunction(value: <eventValueType>) {
+  this.<eventName>.emit(value);
+}
+```
+### In child component .html file:
+For text inputs:
+```html
+<input type="text" #templateReferenceVariable>
+<button (click)="newRequestEventFunction(templateReferenceVariable.value)"></button>
+```
+In my original case I wanted to toggle a parent variable from true to false, so I just did a click event like:
+```html
+<button (click)="newRequestEventFunction(false)"></button>
+```
+### In parent component .ts file:
+* Create a variable you're going to be updating:
+```typescript
+variableToUpdate = true;
+```
+* Create a function that updates that variable:
+```typescript
+updateVariableToUpdate(value: eventValueType) {
+  this.variableToUpdate = value;
+}
+```
+### In parent component .html file:
+```html
+<app-childComponentTag (eventName)="updateVariableToUpdate($event)"></app-childComponentTag>
+```
+
+</br>
+</br>
+</br>
+
 # Angualar Debugging:
-### I added a service to a constructor, and now my page doesn't render
+### <u>I added a service to a constructor, and now my page doesn't render:</u>
 Try adding HttpClientModule to app.module.ts (import at the top, and include in imports inside @NgModule()).
