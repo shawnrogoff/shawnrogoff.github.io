@@ -76,3 +76,19 @@ toCamel(o) {
   }
 ```
 ---
+
+## Check if a variable has a value (strips spaces to check empty strings)
+```javascript
+stringPropertyHasAValue(property) {
+    // strip a variable number of spaces to test if it's truthy
+    if (property) {
+      property = property.replace(/\s/g, '');
+    }
+
+    if(property) {
+      return true;
+    } else {
+      return false;
+    }
+}
+```
