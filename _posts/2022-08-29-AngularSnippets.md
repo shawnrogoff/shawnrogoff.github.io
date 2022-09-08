@@ -256,7 +256,14 @@ updateVariableToUpdate(value: eventValueType) {
 
 <a href="https://www.youtube.com/watch?v=qspoPXaF_Aw&t=575s" target="_blank">Useful Youtube Video On This Subject</a>
 
-</br>
+---
+
+## Call function on mat-select change:
+```html
+<mat-select (selectionChange)="functionName()"></mat-select>
+```
+
+
 
 # Angualar Debugging:
 ### <u>I added a service to a constructor, and now my page doesn't render:</u>
